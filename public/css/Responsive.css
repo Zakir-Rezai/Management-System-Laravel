@@ -1,0 +1,143 @@
+/* The Top-navbar Left Side Css Style Here
+================================================================================ */
+@media only screen and (max-width: 1200px) {
+    .top_navbar .left-side {
+        display: none;
+    }
+}
+
+/* The Top Navbar Right Side CSS Style Here
+================================================================================ */
+@media only screen and (max-width: 1200px) {
+    .top_navbar .right-side {
+      width: calc(100% - 160px);
+    }
+    .top_navbar .right-side .nav-header {
+      padding: 0px 0px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .top_navbar .right-side .nav-header {
+      padding: 0px 0px;
+    }
+    .top_navbar .right-side .nav-header .main-menubar nav {
+      position: absolute;
+      right: 0;
+      top: 47px;
+      margin-right: 0;
+      text-align: right;
+      padding: 20px 0;
+      z-index: 99999;
+      background: darkorchid;
+    }
+    .top_navbar .right-side .nav-header .main-menubar nav a {
+      margin: 5px 25px;
+    }
+}
+
+
+/* The left side vertical navbar CSS Style Here
+================================================================================ */
+@media only screen and (max-width: 1200px) {
+    .sidebar-nav {
+      display: none;
+    }
+    .exit_button {
+      display: none;
+    }
+}
+
+
+/* The left side Menu Part CSS Style Here
+================================================================================ */
+
+@media only screen and (max-width: 1200px) {
+    .Menu-part {
+      left: 0;
+      background-color: mediumpurple;
+    }
+    .Menu-part .navbar .nav-item .nav-link button:hover {
+      background-color: darkorchid;
+    }
+    .Menu-part .navbar .nav-item:active .nav-link button {
+      background-color: darkorchid;
+    }
+}
+
+/* The left side Menu Part CSS Style Here
+================================================================================ */
+
+@media only screen and (max-width: 1200px) {
+    .main-content {
+      left: 170px;
+      width: calc(100% - 180px);
+      z-index: 9;
+    }
+}
+
+
+/* The students table css 
+================================================================================ */
+@media only screen and (max-width: 1200px) {
+  .student-table .outer-div .col-xl-9 {
+    padding-bottom: 14px !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+    .student-table .row .inner-div .table tr {
+      font-size: 13px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .student-table .outer-div .col-xl-9 {
+      padding-right: 0px !important;
+      order: 2;
+    }
+}
+
+
+/* The students list search div css 
+================================================================================ */
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+    .search-div h6 {
+      font-size: 14px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .student-table .outer-div .col-xl-3 {
+      padding-left: 0px !important;
+      order: 1;
+    }
+}
+
+
+/* The students list info div css 
+================================================================================ */
+@media only screen and (max-width: 1200px) {
+  .student-table .outer-div .col-xl-3 {
+    padding-bottom: 14px !important;
+  }  
+}
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+    .info-div h6 {
+      font-size: 14px;
+    }
+    .student-table .row .info-div .table tbody tr td {
+      font-size: 13px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .student-table .outer-div .col-xl-3 {
+      padding-bottom: 14px !important;
+    }
+}
+
+
+/* The create page form css 
+================================================================================ */
+@media only screen and (max-width: 768px) {
+  .create-page form .row .inner-div,
+  .create-page form .row .note-div {
+    margin-left: 0px !important;
+  }
+}

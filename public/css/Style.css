@@ -1,0 +1,661 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #e1ecf2;
+}
+
+/* Some Needed Things
+================================================================================ */
+.text-black {
+  color: black !important;
+}
+.bg-orchid {
+  background-color: darkorchid !important;
+}
+.text-orchid {
+  color: darkorchid !important;
+}
+.bg-purple {
+  background-color: mediumpurple !important;
+}
+.text-purple {
+  color: mediumpurple !important;
+}
+.bg-background {
+  background-color: #e1ecf2 !important;
+}
+.box-shad {
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+
+/* The Top-navbar Left Side Css Style Here
+================================================================================ */
+.top_navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  z-index: 9999;
+}
+.top_navbar .left-side {
+  width: 50px;
+  height: 100%;
+  background-color: darkorchid; 
+  cursor: pointer;
+  text-align: center;  
+  border-bottom: 1px solid white;
+}
+.top_navbar .left-side span {
+  color: white;
+  font-size: 24px;
+  padding-top: 16px; 
+}
+
+/* The Top Navbar Right Side CSS Style Here
+================================================================================ */
+.top_navbar .right-side {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 210px);
+  height: 60px;
+  background-color: darkorchid;
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+}
+.top_navbar .right-side .nav-header {
+  width: 100%;
+}
+.top_navbar .right-side .nav-header .logo .title {
+  font-family: 'Edwardian Script ITC';
+  color: white;
+}
+.top_navbar .right-side .nav-header .main-menubar {
+  position: relative;
+}
+.top_navbar .right-side .nav-header .main-menubar .menu-bar {
+  cursor: pointer;
+}
+.top_navbar .right-side .nav-header .main-menubar .menu-bar span {
+  color: white;
+  font-size: 24px;
+}
+.top_navbar .right-side .nav-header .main-menubar nav {
+  margin-right: 50px;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transform-origin: 100% 50%;
+}
+.top_navbar .right-side .nav-header .main-menubar nav.hide {
+  transform: scale(0);
+}
+.top_navbar .right-side .nav-header .main-menubar nav a {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  margin: 0 25px;
+  display: inline-block;
+}
+.top_navbar .right-side .nav-header .main-menubar nav a:hover {
+  color: mediumpurple;
+}
+
+
+/* The left side vertical navbar CSS Style Here
+================================================================================ */
+.sidebar-nav {
+  position: fixed;
+  top: 60px;
+  width: 50px;
+  height: calc(100% - 110px);
+  background-color: darkorchid;
+  display: flex;
+  align-items: center;
+}
+.sidebar-nav ul li a {
+  display: block;
+  padding: 13px;
+  position: relative;
+  margin-bottom: 1px;
+  color: white; 
+  white-space: nowrap;
+  text-align: center;
+  font-size: 24px;
+}
+.sidebar-nav ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  display: none;
+}
+.sidebar-nav ul li a:hover,
+.sidebar-nav ul li a.active {
+  background-color: mediumpurple;
+  color: white;
+}
+.sidebar-nav ul li a:hover::before,
+.sidebar-nav ul li a.active::before {
+  display: block;
+}
+.exit_button {
+  position: fixed;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  background-color: darkorchid;
+  text-align: center;
+  padding-top: 12px; 
+  border-top: 1px solid white;
+}
+.exit_button a span {
+  font-size: 24px;
+  color: white;
+}
+
+
+/* The left side Menu Part CSS Style Here
+================================================================================ */
+.Menu-part {
+  position: fixed;
+  top: 0;
+  left: 50px;
+  width: 160px;
+  height: 100%;
+  background-color: mediumpurple;   
+}
+.Menu-part .img-frame {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 35px auto;
+  box-shadow: 1px 2px 1px rgba(0,0,0,0.3);        
+}
+.Menu-part .navbar .nav-item {
+  border-bottom: 1px solid white;
+}
+.Menu-part .navbar .nav-item .nav-link button {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;    
+  padding-top: 15px;
+  padding-bottom: 15px; 
+  outline: none;   
+  color: white;
+  background: none;
+  border: none;    
+  font-size: 15px; 
+}
+.Menu-part .navbar .nav-item .nav-link button:focus {
+  outline: none;
+  background-color: darkorchid;
+  color: white;    
+}
+.Menu-part .navbar .nav-item .nav-link button:hover {
+  background-color: darkorchid;
+  color: white;    
+}
+.Menu-part .navbar .nav-item:active .nav-link button {
+  background-color: darkorchid;
+  color: white;    
+}
+@media only screen and (max-width: 1200px) {
+  .Menu-part .img-frame {
+    margin: 25px auto !important;
+  }
+}
+
+/* The left side Menu Part CSS Style Here
+================================================================================ */
+.main-content {
+  position: absolute;
+  top: 70px;
+  left: 220px;
+  width: calc(100% - 230px);
+  height: calc(100% - 80px);
+  z-index: 9;
+}
+
+/* The students list top row css 
+================================================================================ */
+.student-table .bord {
+  border-bottom: 1px solid mediumpurple;
+}
+.student-table .row .title {
+  color: darkorchid; 
+}
+.student-table .row .btn {
+  background-color: mediumpurple;
+  color: white;
+  transition: 0.5s;
+  transition-property: background-color;
+}
+.student-table .row .btn:hover {
+  color: white;
+  background-color: darkorchid;
+} 
+
+
+/* The students table css 
+================================================================================ */
+.student-table .outer-div {
+  height: calc(100% - 65px);
+}
+.student-table .row .inner-div {
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+}  
+.student-table .row .inner-div .table {
+  border-color: mediumpurple !important;
+} 
+.student-table .row .inner-div .table thead tr th {
+  border-color: mediumpurple;
+  border-bottom: 0px;
+  color: darkorchid;
+}
+.student-table .row .inner-div .table tbody tr td {
+  border-color: mediumpurple;
+  color: mediumpurple;
+}
+
+
+/* The students list search div css 
+================================================================================ */
+.student-table .row .search-div {
+  height: 150px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+.student-table .row .search-div .input-group .form-control {
+  border-color: mediumpurple;
+}
+.student-table .row .search-div .input-group .input-group-append:hover .input-group-text {
+  transition: all 0.5s ease-in-out;
+  background-color: darkorchid !important;
+}
+
+
+/* The students list info div css 
+================================================================================ */
+.student-table .row .info-div {
+  margin-top: 13px;
+  height: 375px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+}
+.student-table .row .info-div .table tbody tr td {
+  border-color: mediumpurple !important;
+}
+.student-table .row .info-div .bar .txt {
+  float: left;
+  font-size: 12px;
+}
+.student-table .row .info-div .bar .progress {
+  height: 20px;
+}
+.student-table .row .info-div .bar .progress .progress-bar .amount {
+  font-size: 12px;
+}
+
+
+/* The Show view top bar css 
+================================================================================ */
+.show-page .bord {
+  border-bottom: 1px solid mediumpurple;
+}
+.show-page .bord span {
+  font-size: 16px;
+}
+.show-page .row .title {
+  color: darkorchid; 
+}
+.show-page .row .btn {
+  background-color: mediumpurple;
+  color: white;
+  transition: 0.5s;
+  transition-property: background-color;
+}
+.show-page .row .btn:hover {
+  background-color: darkorchid;
+}
+.show-page .row .left-side ul {
+  background: none !important;
+} 
+
+/* The Show view css 
+================================================================================ */
+.show-page .student-show {
+  height: calc(100% - 55px); 
+}
+.show-page .student-show .inner-div {
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* The profile div css 
+================================================================================ */
+.show-page .student-show .inner-div .student-info .row .border-right {
+  border-right: 5px solid #e1ecf2 !important;
+}
+.show-page .student-show .inner-div .student-info .row .img-div {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  margin: 0 auto;
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+}
+.show-page .student-show .inner-div .student-info .row .border-right h5 {
+  font-weight: 700 !important;
+}
+.show-page .student-show .inner-div .student-info .row .border-right .row .border-right {
+  border-right: 2px solid darkorchid !important;
+}
+
+/* The student info div css 
+================================================================================ */
+.show-page .student-show .inner-div .student-info .row .border-bottom {
+  border-bottom: 1px solid #e1ecf2 !important;
+}
+
+
+/* The Bottom date show div css 
+================================================================================ */
+.show-page .student-show .fee-info {
+  height: 218px;
+  margin-top: 13px !important;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+}.show-page .student-show .fee-info .bg-background {
+  border-radius: 5px;
+}
+.show-page .student-show .fee-info .border-bottom {
+  border-bottom: 1px solid lightgray !important;
+}
+.show-page .student-show .fee-info .payroll .bill-list {
+  position: relative;
+}
+.show-page .student-show .fee-info .payroll .bill-list .bill {
+  margin-left: 40px !important;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+.show-page .student-show .fee-info .payroll {
+  width: 100%;
+  height: calc(100% - 48px);
+  overflow: auto;
+}
+.show-page .student-show .fee-info .small-circle {
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  border: 4px solid darkorchid;
+  border-radius: 50%;
+}
+.show-page .student-show .fee-info .small-circle::before {
+  position: absolute;
+  top: -38px;
+  left: 1px;
+  content: "";
+  display: block;
+  width: 4px;
+  height: 35px;
+  background-color: mediumpurple;
+}
+.show-page .student-show .fee-info .small-circle::after {
+  position: absolute;
+  top: 10px;
+  left: 1px;
+  content: "";
+  display: block;
+  width: 4px;
+  height: 35px;
+  background-color: mediumpurple;
+}
+
+
+/* The right side bottom skill div css 
+================================================================================ */
+.show-page .student-show .row .note-bottom-div {
+  height: 215px;
+  margin-top: 13px !important;
+  margin-left: 5px !important;  
+}
+.show-page .student-show .row .note-bottom-div .inner-div .circular {
+  position: relative;
+  height: 130px;
+  width: 130px;
+  transition: scale(2);
+  margin: 20px auto;
+}
+.show-page .student-show .row .note-bottom-div .inner-div .circular .inner {
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  width: 100px;
+  margin: -50px 0 0 -50px;
+}
+.show-page .student-show .row .note-bottom-div .inner-div .circular .numb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 20px;
+  font-weight: bold;
+}
+.show-page .student-show .row .note-bottom-div .inner-div .circular .circle .probar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  clip: rect(0px, 130px, 130px, 65px);
+}
+.show-page .student-show .row .note-bottom-div .inner-div .circular .circle .probar .progres {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  clip: rect(0px, 65px, 130px, 0px);
+  background-color: mediumpurple;
+}
+.show-page .student-show .row .note-bottom-div .inner-div .circular .circle .left .progres {
+  z-index: 1;
+  animation: left 2s linear both;
+}
+.show-page .student-show .row .note-bottom-div .inner-div .circular .circle .right {
+  z-index: 3;
+  transform: rotate(180deg);
+}
+.show-page .student-show .row .note-bottom-div .inner-div .circular .circle .right .progres {
+  animation: right 2s linear both;
+  animation-delay: 2s;
+}
+
+
+/* The create page top row css 
+================================================================================ */
+.create-page .bord {
+  border-bottom: 1px solid mediumpurple;
+}
+.create-page .row .title {
+  color: darkorchid; 
+}
+.create-page .row .btn {
+  background-color: mediumpurple;
+  color: white;
+  transition: 0.5s;
+  transition-property: background-color;
+}
+.create-page .row .btn:hover {
+  color: white;
+  background-color: darkorchid;
+} 
+
+
+/* The create page form css 
+================================================================================ */
+.create-page .row .box {
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+.create-page form .row .form-div input,
+.create-page form .row .form-div select {
+  background: none !important;
+  border: none;
+  border-bottom: 1px solid mediumpurple;
+  display: block;
+  width: 230px;
+}
+.create-page form .row .btn-div {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+.create-page form .row .btn-div button {
+  background-color: mediumpurple;
+  color: white;
+  transition: 0.5s ease-in-out;
+  transition-property: background-color;
+}
+.create-page form .row .btn-div button:hover {
+  background-color: darkorchid;
+}
+
+
+/* The create page select image div css 
+================================================================================ */
+.create-page .row .inner-div .image-div {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  margin: 0 auto;
+}
+.create-page .row .inner-div {
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+.create-page .row .inner-div .error {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+.create-page .row .note-div {
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+.create-page .row .note-div .icon {
+  font-size: 18px !important;
+}
+.create-page .row .inner-div .image-div #output {
+  display: none;
+  border: 2px solid darkorchid;
+  border-radius: 50%;
+}
+.create-page .row .inner-div .image-div #label {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border: 2px solid darkorchid;
+  background: mediumpurple;
+  font-weight: normal !important;
+  border-radius: 50%;
+  margin: 0 !important;
+  transition: all 0.5s ease-in-out;
+}
+.create-page .row .inner-div .image-div #label:hover {
+  border-color: mediumpurple;
+  background-color: darkorchid;
+}
+.create-page .row .inner-div .image-div #label .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  font-size: 30px;
+}
+.create-page .row .inner-div .image-div input {
+  display: none;
+}
+
+
+
+/* The Payment Page css 
+================================================================================ */
+.bg-modal {
+  display: none;  
+  justify-content: center;
+  align-items: center; 
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+}
+.bg-modal .modal-content {
+  width: 380px;
+  height: 550px;
+  background-color: white;
+  border-radius: 10px;
+}
+/* The Payment Page top bar css 
+================================================================================ */
+.bg-modal .modal-content .bord {
+  border-bottom: 1px solid mediumpurple;
+}
+.bg-modal .modal-content .row .title {
+  color: darkorchid; 
+}
+.bg-modal .modal-content .row .btn {
+  background-color: none;
+  color: mediumpurple;
+  font-size: 18px;
+}
+.bg-modal .modal-content .row .btn:hover {
+  color: darkorchid;
+}
+/* The Payment page form css 
+================================================================================ */
+.bg-modal .modal-content form .form-group input {
+  border: 1px solid darkorchid;
+  display: block;
+}
+.bg-modal .modal-content form .form-group input::placeholder {
+  color: mediumpurple !important;
+}
+.bg-modal .modal-content form .btn-div {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+.bg-modal .modal-content form .btn-div .btn {
+  background-color: mediumpurple;
+  color: white;
+  transition: 0.5s ease-in-out;
+  transition-property: background-color;
+}
+.bg-modal .modal-content form .btn-div .btn:hover {
+  background-color: darkorchid;
+}
